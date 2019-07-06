@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+<h1> Count Page ! </h1>
+<br />
+<form action="{% url 'home' %}">
+    <button> Back </button>
+</form>
+<br>
+<a href="{% url 'home' %}"> Back </a>
+<h3> Original Text : </h3>
+{{ fulltext }}
+<br>
+<h2> Total Word Count : {{ wordcount }}</h2>
+<br>
+<h3> Word Frequency </h3>
+{% for word, wrdcount in sortedwords %}
+{{ word }} : {{ wrdcount }}
+<br>
+{% endfor %}
+<br>
+<br>
+
+</body>
+</html>
